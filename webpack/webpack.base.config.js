@@ -47,7 +47,7 @@ module.exports = {
         ],
     },
     resolve: {
-        modules: [path.resolve(__dirname, 'src'), 'node_modules'], // used to make use of absolute import
+        modules: [path.resolve(__dirname, '../src'), 'node_modules'], // used to make use of absolute import
         extensions: ['*', '.js', '.jsx', '.json'],
     },
 };
