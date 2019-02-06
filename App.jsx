@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import { Provider } from 'react-redux';
 import { Route, BrowserRouter } from 'react-router-dom';
 
-import store from './src/store';
+import store from 'store';
 
-import './src/assets/common_styles/style.scss';
+import 'assets/common_styles/style.scss';
 
 class App extends Component {
 
