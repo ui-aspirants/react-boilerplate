@@ -1,6 +1,5 @@
 const path = require('path');
 const webpack = require('webpack');
-const Visualizer = require('webpack-visualizer-plugin');
 
 module.exports = {
     entry: {
@@ -10,18 +9,9 @@ module.exports = {
         ],
     },
     output: {
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(__dirname, '../dist'),
         filename: 'bundle.js',
         publicPath: '/'
-    },
-    devServer: {
-        inline: true,
-        historyApiFallback: true
-    },
-    mode: 'development', // change mode to production on prod.
-    devtool: '#eval-source-map', // To show console output from original file instead of showing from bundle file
-    optimization: {
-        minimize: true
     },
     module: {
         rules: [
@@ -60,11 +50,6 @@ module.exports = {
         modules: [path.resolve(__dirname, 'src'), 'node_modules'], // used to make use of absolute import
         extensions: ['*', '.js', '.jsx', '.json'],
     },
-    plugins: [
-        new Visualizer({
-            filename: './statistics.html' // statistics.html will view the bundle.js usages.
-        }),
-    ],
 };
 
 // Note: In production check sass-loader once.
