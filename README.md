@@ -1,6 +1,14 @@
 # react-js-boiler-plate
 React JS boilerplate made with ❤
 
+# Usage
+
+```
+1) npm install
+2) npm start
+3) open http://localhost:8080
+```
+
 This boiler plate comes with almost every essential webpack configuration.
 
 ### State usage
