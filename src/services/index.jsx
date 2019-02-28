@@ -1,7 +1,7 @@
 import axios from 'axios';
 import cookie from 'react-cookies';
 
-import { ROOT_URL } from "./../const";
+const ROOT_URL = process.env.API_URL;
 
 function getToken() {
     return cookie.load('session');
@@ -15,7 +15,6 @@ function API_CALL(method, url, data, type, callback, file) {
         // cookie.remove('session', {
         //     path: '/'
         // });
-        // window.location.href = '/logout';
     });
     let header = {};
     if (getToken()) {
